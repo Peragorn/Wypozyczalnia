@@ -1,0 +1,6 @@
+C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental.dll.config
+C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental.dll
+C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental.pdb
+C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.csprojResolveAssemblyReference.cache
+C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.dll
+C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.pdb
