@@ -4,3 +4,13 @@ C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental
 C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.dll
 C:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.pdb
 c:\Users\Damian\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.csprojResolveAssemblyReference.cache
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental.dll.config
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental.dll
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\CarRental.pdb
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\EntityFramework.dll
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\EntityFramework.SqlServer.dll
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\EntityFramework.xml
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\bin\EntityFramework.SqlServer.xml
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.csprojResolveAssemblyReference.cache
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.dll
+C:\Users\Paweł\Documents\GitHub\Wypozyczalnia\CarRental\CarRental\obj\Debug\CarRental.pdb
