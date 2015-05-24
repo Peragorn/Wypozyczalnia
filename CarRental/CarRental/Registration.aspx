@@ -5,11 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Rejestracja</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/form_style.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="auto-style1">
-    
+       <div class="dark-matter">
+       
         <asp:Label ID="LabelLogin" runat="server" Text="Login" style="text-align: right" Width="100px"></asp:Label>
     
         <asp:TextBox ID="TextBoxLogin" runat="server" Height="20px" Width="180px"></asp:TextBox>
@@ -19,12 +21,13 @@
         <asp:TextBox ID="TextBoxPassword" runat="server" TextMode="Password" Height="20px" Width="180px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxPassword" ErrorMessage="Wprowadz haslo" ForeColor="Red"></asp:RequiredFieldValidator>
         &nbsp;<br />
+        <br />
         <asp:Label ID="LabelCpassword" runat="server" style="text-align: right" Text="Powtórz hasło" Width="100px"></asp:Label>
         <asp:TextBox ID="TextBoxCPassword" runat="server" TextMode="Password" Height="20px" Width="180px"></asp:TextBox>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBoxCPassword" ErrorMessage="Powtorz haslo" ForeColor="Red"></asp:RequiredFieldValidator>
-    
+   
         &nbsp;<asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBoxPassword" ControlToValidate="TextBoxCPassword" ErrorMessage="Hasła muszą się zgadzać" ForeColor="Red"></asp:CompareValidator>
-    
+           <br />
         <br />
         <asp:Label ID="LabelName" runat="server" style="text-align: right" Text="Imię" Width="100px"></asp:Label>
         <asp:TextBox ID="TextBoxName" runat="server" Height="20px" Width="180px"></asp:TextBox>
@@ -40,9 +43,11 @@
     
     &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxEmail" ErrorMessage=" Zła forma adresu email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
         <br />
+        <br />
+        <asp:Button ID="ButtonReg" runat="server" OnClick="Button1_Click" Text="Zarejestruj" style="text-align: left" class="button" />
+        <br />
     
     </div>
-        <asp:Button ID="ButtonReg" runat="server" OnClick="Button1_Click" Text="Zarejestruj" style="text-align: left" />
     </form>
 </body>
 </html>
