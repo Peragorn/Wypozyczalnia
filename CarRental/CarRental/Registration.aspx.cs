@@ -62,7 +62,7 @@ namespace CarRental
                 }
                 if (Temp == 0)
                 {
-                    string insertQuery = "insert into UserData (Login, Name, Surname, Password, Email) values (@login, @name, @surname, @password, @email)";
+                    string insertQuery = "insert into UserData (Login, Name, Surname, Password, Email, TypeOfUser, AccStatus) values (@login, @name, @surname, @password, @email, @tou, @accs)";
 
                     SqlCommand com = new SqlCommand(insertQuery, conn);
 
@@ -71,6 +71,8 @@ namespace CarRental
                     com.Parameters.AddWithValue("@surname", TextBoxSurname.Text);
                     com.Parameters.AddWithValue("@password", TextBoxPassword.Text);
                     com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
+                    com.Parameters.AddWithValue("@tou", "USER");
+                    com.Parameters.AddWithValue("@accs", "T");
 
                     //Response.Redirect("DBTest.aspx");
                     Response.Write("Zarejestrowano");

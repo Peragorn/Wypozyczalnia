@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Logowanie</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    
+    <link rel="icon" href="css/image/samochod.jpg"/>
     <link href="css/cover.css" rel="stylesheet" />
 </head>
 <body>
@@ -47,7 +47,6 @@
         <asp:Button ID="Button_LogIN" runat="server" Text="Zaloguj"  class="button" OnClick="Button_LogIN_Click1" />
     
     </div>
-    </form>
 
 
             
@@ -57,6 +56,10 @@
             </div>
           </div>
 
+    </form>
+
+
+            
         </div>
 
       </div>
