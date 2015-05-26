@@ -23,7 +23,7 @@
                 <ul class="nav masthead-nav">
                   <li ><a href="..">Home</a></li>
                   <li class="active"><a href="#">Rejestracja</a></li>
-                   <li><a href="#">Logowanie</a></li>
+                   <li><a href="Login.aspx">Logowanie</a></li>
                 </ul>
               </nav>
             </div>
