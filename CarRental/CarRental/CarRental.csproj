@@ -61,6 +61,7 @@
     <Content Include="App_Data\Registration_log.ldf">
       <DependentUpon>Registration.mdf</DependentUpon>
     </Content>
+    <Content Include="CarView.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -98,6 +99,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarView.aspx.cs">
+      <DependentUpon>CarView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarView.aspx.designer.cs">
+      <DependentUpon>CarView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBTest.aspx.cs">
       <DependentUpon>DBTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
