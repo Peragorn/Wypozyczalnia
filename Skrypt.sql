@@ -47,3 +47,22 @@ CREATE TABLE [dbo].[Mail]
     [Body] NCHAR(200) NOT NULL, 
     CONSTRAINT [FK_Mail_USER] FOREIGN KEY ([Id_user]) REFERENCES [UserData]([Id])
 )
+
+
+
+
+
+
+////// Poprawiony skrypt wywalona referencja i pole id_user
+
+
+CREATE TABLE [dbo].[Car] (
+    [Id_Car]    INT         IDENTITY (1, 1) NOT NULL,
+    [TradeMark] NCHAR (50)  NOT NULL,
+    [Model]     NCHAR (50)  NOT NULL,
+    [Rent]      NCHAR (50)  NOT NULL,
+    [Price]     MONEY       NOT NULL,
+    [Image]     NCHAR (500) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id_Car] ASC)
+);
+

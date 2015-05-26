@@ -38,7 +38,6 @@
         <asp:GridView ID="GridView2" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="Id_Car" DataSourceID="SqlDataSourceCar">
             <Columns>
                 <asp:BoundField DataField="Id_Car" HeaderText="Id_Car" InsertVisible="False" ReadOnly="True" SortExpression="Id_Car" />
-                <asp:BoundField DataField="Id_user" HeaderText="Id_user" SortExpression="Id_user" />
                 <asp:BoundField DataField="TradeMark" HeaderText="TradeMark" SortExpression="TradeMark" />
                 <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
                 <asp:BoundField DataField="Rent" HeaderText="Rent" SortExpression="Rent" />
