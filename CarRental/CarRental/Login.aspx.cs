@@ -25,37 +25,48 @@ namespace CarRental
 
             conn.Open();
 
-            string checkuser = "select count(*) from UserData where name = '" + TextBox_Login.Text + "'";
+            string checkuser = "select count(*) from UserData where login = '" + TextBox_Login.Text + "'";
 
             SqlCommand com = new SqlCommand(checkuser, conn);
             int Temp = Convert.ToInt32(com.ExecuteScalar().ToString());
 
             conn.Close();
-            if (Temp == 1)
+            try
             {
-                conn.Open();
-
-                string checkPasswordQuery = "select Password from UserData where password ='" + TextBox_Password.Text + "'";
-                SqlCommand passComm = new SqlCommand(checkPasswordQuery, conn);
-
-                string password = passComm.ExecuteScalar().ToString().Replace(" ", "");
-                if (password == TextBox_Password.Text)
+                if (Temp == 1)
                 {
-                    Session["New"] = TextBox_Login.Text;
-                    Response.Write("Hasło jest poprawne!");
+                    conn.Open();
+
+                    string checkPasswordQuery = "select Password from UserData where password ='" + TextBox_Password.Text + "'" + "AND login = '" + TextBox_Login.Text + "'";
+                    SqlCommand passComm = new SqlCommand(checkPasswordQuery, conn);
+
+                    //Response.Write("DANE "+passComm.ExecuteScalar().ToString());
+
+                    string password = passComm.ExecuteScalar().ToString().Replace(" ", "");
+                    if (password == TextBox_Password.Text)
+                    {
+                        Session["New"] = TextBox_Login.Text;
+                        Response.Write("Hasło jest poprawne!");
+                    }
+                   // else
+                   // {
+                       // Response.Write("Hasło jest niepoprawne!");
+                        //Response.Write("\t"+TextBox_Password.Text);
+                        // Response.Write("\t" + password);
+                   /// }
                 }
                 else
                 {
-                    Response.Write("Hasło jest niepoprawne!");
-                    //Response.Write("\t"+TextBox_Password.Text);
-                    // Response.Write("\t" + password);
+                    Response.Write("Login jest niepoprawny!");
                 }
+                conn.Close();
             }
-            else
+            catch (Exception ex)
             {
-                Response.Write("Login jest niepoprawny!");
+                //Response.Write("ERROR " + ex.ToString());
+                // dostajemy null wiec haslo bedzie nieprawdziwe
+                Response.Write("Hasło jest niepoprawne!");
             }
-            conn.Close();
 
             TextBox_Login.Text = "";
             TextBox_Password.Text = "";
