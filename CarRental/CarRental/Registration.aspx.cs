@@ -71,8 +71,8 @@ namespace CarRental
                     com.Parameters.AddWithValue("@surname", TextBoxSurname.Text);
                     com.Parameters.AddWithValue("@password", TextBoxPassword.Text);
                     com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
-                    com.Parameters.AddWithValue("@tou", "USER");
-                    com.Parameters.AddWithValue("@accs", "T");
+                    com.Parameters.AddWithValue("@tou", "1");
+                    com.Parameters.AddWithValue("@accs", "1");
 
                     //Response.Redirect("DBTest.aspx");
                     Response.Write("Zarejestrowano");

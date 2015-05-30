@@ -11,17 +11,16 @@
         <asp:SqlDataSource ID="SqlDataSourceRegistration" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="SELECT * FROM [UserData]"></asp:SqlDataSource>
     <div>
     </div>
-        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSourceRegistration" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Login" DataSourceID="SqlDataSourceRegistration" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" InsertVisible="False" />
-                <asp:BoundField DataField="Login" HeaderText="Login" SortExpression="Login" />
+                <asp:BoundField DataField="Login" HeaderText="Login" ReadOnly="True" SortExpression="Login" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                 <asp:BoundField DataField="Surname" HeaderText="Surname" SortExpression="Surname" />
                 <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
                 <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                <asp:BoundField DataField="TypeOfUser" HeaderText="TypeOfUser" SortExpression="TypeOfUser" />
-                <asp:BoundField DataField="AccStatus" HeaderText="AccStatus" SortExpression="AccStatus" />
+                <asp:CheckBoxField DataField="TypeOfUser" HeaderText="TypeOfUser" SortExpression="TypeOfUser" />
+                <asp:CheckBoxField DataField="AccStatus" HeaderText="AccStatus" SortExpression="AccStatus" />
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -40,9 +39,10 @@
                 <asp:BoundField DataField="Id_Car" HeaderText="Id_Car" InsertVisible="False" ReadOnly="True" SortExpression="Id_Car" />
                 <asp:BoundField DataField="TradeMark" HeaderText="TradeMark" SortExpression="TradeMark" />
                 <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
-                <asp:BoundField DataField="Rent" HeaderText="Rent" SortExpression="Rent" />
+                <asp:CheckBoxField DataField="Rent" HeaderText="Rent" SortExpression="Rent" />
                 <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                 <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
+                <asp:BoundField DataField="ImageUrl" HeaderText="ImageUrl" ReadOnly="True" SortExpression="ImageUrl" />
             </Columns>
             <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
             <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
@@ -59,7 +59,7 @@
             <Columns>
                 <asp:BoundField DataField="Id_Rent" HeaderText="Id_Rent" ReadOnly="True" SortExpression="Id_Rent" />
                 <asp:BoundField DataField="Id_car" HeaderText="Id_car" SortExpression="Id_car" />
-                <asp:BoundField DataField="Id_user" HeaderText="Id_user" SortExpression="Id_user" />
+                <asp:BoundField DataField="Login" HeaderText="Login" SortExpression="Login" />
                 <asp:BoundField DataField="Rent_start" HeaderText="Rent_start" SortExpression="Rent_start" />
                 <asp:BoundField DataField="Rent_end" HeaderText="Rent_end" SortExpression="Rent_end" />
             </Columns>
@@ -78,7 +78,7 @@
             <AlternatingRowStyle BackColor="#F7F7F7" />
             <Columns>
                 <asp:BoundField DataField="Id_Mail" HeaderText="Id_Mail" ReadOnly="True" SortExpression="Id_Mail" />
-                <asp:BoundField DataField="Id_user" HeaderText="Id_user" SortExpression="Id_user" />
+                <asp:BoundField DataField="Login" HeaderText="Login" SortExpression="Login" />
                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                 <asp:BoundField DataField="Body" HeaderText="Body" SortExpression="Body" />
             </Columns>

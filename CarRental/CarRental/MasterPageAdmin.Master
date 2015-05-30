@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPageAdmin.master.cs" Inherits="CarRental.MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        </style>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <table class="auto-style1">
+            <tr>
+                <td>
+                         <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                            </asp:ContentPlaceHolder>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/AdminPage.aspx">Home</asp:HyperLink>
+                    <br />
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/AdminEditUser.aspx">Edit User</asp:HyperLink>
+                    <br />
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AdminEditCars.aspx">Edit Cars</asp:HyperLink>
+
+                    <br />
+                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/AdminShowEmails.aspx">Show emails</asp:HyperLink>
+                    <br />
+                    <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AdminWriteEmail.aspx">Write email</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                         <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+                            </asp:ContentPlaceHolder>
+                        </div>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
+
+
