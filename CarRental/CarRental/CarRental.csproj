@@ -81,9 +81,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Mails.aspx" />
     <Content Include="MasterPageAdmin.Master" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="RentCommit.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -162,6 +164,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mails.aspx.cs">
+      <DependentUpon>Mails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mails.aspx.designer.cs">
+      <DependentUpon>Mails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPageAdmin.Master.cs">
       <DependentUpon>MasterPageAdmin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -176,6 +185,13 @@
     </Compile>
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RentCommit.aspx.cs">
+      <DependentUpon>RentCommit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RentCommit.aspx.designer.cs">
+      <DependentUpon>RentCommit.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>

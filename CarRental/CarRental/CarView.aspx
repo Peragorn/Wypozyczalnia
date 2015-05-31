@@ -27,73 +27,53 @@
             </div>
           </div>
 
-    <div class = "inner cover">
-        <form runat="server" id="form1">
+        <form id="form1" runat="server">
+             <asp:DataList ID="DataList1" runat="server" DataKeyField="Id_Car" DataSourceID="CarRentalDB" OnItemCommand="DataList1_ItemCommand" OnDeleteCommand="DataList1_DeleteCommand">
+<ItemTemplate>
+<div class = "inner cover">
+
         <table class="table table-condensed" width: 100%>
             <thead>
                 <tr>
                     <th>
-                        <asp:Label ID="Marka" runat="server" Text="Marka"></asp:Label>
-                        <asp:Label ID="Model" runat="server" Text="Model"></asp:Label>
+                        <asp:Label ID="Marka" runat="server" Text='<%# Eval("TradeMark") %>'></asp:Label>
+                        <asp:Label ID="Model" runat="server" Text='<%# Eval("Model") %>'></asp:Label>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" Height="196px" Width="300px" align="left"/>            
-                        <asp:Label ID="Cennik" runat="server" Text="Cena/dzien"></asp:Label>
+                    <td>                                    
+                        <img src ='<%# Eval("ImageUrl") %>' width ="300" height ="196" />
+                        Cena/dzień: <asp:Label ID="Cennik" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
                     </td>
                 </tr>
             </tbody>
             <tfoot>                
                 <tr>
                     <td>
-                        Dostępny: <asp:Label ID="dst" runat="server" Text="Dostępność"></asp:Label>
+                        Dostępny: <asp:Label ID="dst" runat="server" Text='<%# Eval("Rent") %>'></asp:Label>
                     </td>
                 </tr>               
             </tfoot>
         </table>
-            <input type="submit" class="btn btn-success" value="Wypożycz" />
+            <asp:Button ID="Buttonwypozycz" runat="server" class="btn btn-success" CommandName="Dalej" Text="Wypożycz" />
         </form>
     </div>
-
-
-      
-       <div class = "inner cover">
-       <form id="form2"> 
-        <table class="table table-condensed" width: 100%>
-            <thead>
-                <tr>
-                    <th>
-                        <asp:Label ID="Label1" runat="server" Text="Marka"></asp:Label>
-                        <asp:Label ID="Label2" runat="server" Text="Model"></asp:Label>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <asp:Image ID="Image2" runat="server" Height="196px" Width="300px" align="left"/>            
-                        <asp:Label ID="Label3" runat="server" Text="Cena/dzien"></asp:Label>
-                    </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td>
-                        Dostępny: <asp:Label ID="Label4" runat="server" Text="Dostępność"></asp:Label>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
-           <input type="submit" class="btn btn-success" value="Wypożycz" />
-        </form>
-    </div>
-
+                        </ItemTemplate>
+                    </asp:DataList>
+                    <asp:SqlDataSource ID="CarRentalDB" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="SELECT * FROM [Car] WHERE ([Rent] = @Rent)">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="True" Name="Rent" Type="Boolean" />
+                        </SelectParameters>
+            </asp:SqlDataSource>
+            </form>
             <div width: 100% position: fixed;>
                 <div class="inner">
                     <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                    
+                    
+                   
                 </div>
           </div>
 
