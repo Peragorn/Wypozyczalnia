@@ -44,8 +44,10 @@
             <tbody>
                 <tr>
                     <td>                                    
-                        <img src ='<%# Eval("ImageUrl") %>' width ="300" height ="196" />
-                        Cena/dzień: <asp:Label ID="Cennik" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
+                        <td>                                    
+                        <img src ='<%# Eval("ImageUrl") %>' width ="250" height ="150" /></td>
+                        <td>Cena/dzień: <asp:Label ID="Cennik" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
+                    </td>
                     </td>
                 </tr>
             </tbody>
