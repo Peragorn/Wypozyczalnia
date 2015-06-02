@@ -8,6 +8,19 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     
     <link href="css/cover.css" rel="stylesheet" />
+        <style type="text/css">
+        .auto-style1 {
+            width: 326px
+        }
+        .auto-style2 {
+            width: 326px;
+            height: 44px;
+        }
+        .auto-style3 {
+            width: 326px;
+            height: 42px;
+        }
+    </style>
 </head>
 <body>
         <div class="site-wrapper">
