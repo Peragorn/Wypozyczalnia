@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs" Inherits="CarRental.UserMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Panel Użytkownika</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="css/image/samochod.jpg" />
+    <link href="css/cover.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Wypożyczalnia</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="..">Home</a></li>
+                                <!--
+                                <li><a href="Registration.aspx">Rejestracja</a></li>
+                                <li><a href="Login.aspx">Logowanie</a></li>
+                                -->
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="inner">
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a href="CarView.aspx">Wypożycz auto</a></li>
+                                <li><a href="..">Wiadomości email</a></li>
+                                <li><a href="..">Moje wypożyczenia</a></li>
+                                <li><a href="..">Moje konto</a></li>
+                                <li><a href="Logout.aspx">Wyloguj</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <form id="form1" runat="server">
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </form>
+
+            </div>
+            <div class="mastfoot">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

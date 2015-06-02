@@ -1,19 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="CarRental.User" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="User.aspx.cs" Inherits="CarRental.User" MasterPageFile="~/UserMasterPage.Master" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-        <asp:Label ID="LabelWelcome" runat="server" Text="Witaj "></asp:Label>
-    
-    </div>
-        <asp:Button ID="ButtonLogout" runat="server" OnClick="ButtonLogout_Click" Text="Wyloguj" />
-    </form>
-</body>
-</html>
+    <asp:Label ID="LabelWelcome" runat="server" Text="Zalogowany użytkownik  " ></asp:Label>
+
+
+     
+
+</asp:Content>

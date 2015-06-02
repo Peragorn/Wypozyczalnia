@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CarView.aspx.cs" Inherits="CarRental.CarView" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CarView.aspx.cs" Inherits="CarRental.CarView" MasterPageFile="~/UserMasterPage.Master"%>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -25,9 +25,10 @@
                 </ul>
               </nav>
             </div>
-          </div>
+          </div>--%>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <form id="form1" runat="server">
+   <%--     <form id="form1" runat="server">--%>
              <asp:DataList ID="DataList1" runat="server" DataKeyField="Id_Car" DataSourceID="CarRentalDB" OnItemCommand="DataList1_ItemCommand" OnDeleteCommand="DataList1_DeleteCommand">
 <ItemTemplate>
 <div class = "inner cover">
@@ -60,7 +61,7 @@
             </tfoot>
         </table>
             <asp:Button ID="Buttonwypozycz" runat="server" class="btn btn-success" CommandName="Dalej" Text="Wypożycz" />
-        </form>
+     <%--   </form>--%>
     </div>
                         </ItemTemplate>
                     </asp:DataList>
@@ -69,8 +70,11 @@
                             <asp:Parameter DefaultValue="True" Name="Rent" Type="Boolean" />
                         </SelectParameters>
             </asp:SqlDataSource>
-            </form>
-            <div width: 100% position: fixed;>
+            <%--</form>--%>
+    </asp:Content>
+
+            
+<%--            <div width: 100% position: fixed;>
                 <div class="inner">
                     <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
                     
@@ -86,4 +90,4 @@
     </div>
 
 </body>
-</html>
+</html>--%>
