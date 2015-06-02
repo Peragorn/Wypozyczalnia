@@ -65,5 +65,42 @@ namespace CarRental
             DataList1.EditItemIndex = -1;
             DataList1.DataBind();
         }
+
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            string CommandName = e.CommandName;
+
+            if (CommandName == "Insert")
+            {
+                SqlDataSource1.InsertParameters["TradeMark"].DefaultValue =
+                    ((TextBox)e.Item.FindControl("TextBoxTradeMark")).Text;
+
+
+                SqlDataSource1.InsertParameters["Model"].DefaultValue =
+                    ((TextBox)e.Item.FindControl("TextBoxModel")).Text;
+
+ 
+                SqlDataSource1.InsertParameters["Rent"].DefaultValue =
+                    ((CheckBox)e.Item.FindControl("CheckBoxRent")).Checked.ToString();
+           
+    
+
+     
+                SqlDataSource1.InsertParameters["Price"].DefaultValue =
+                    ((TextBox)e.Item.FindControl("TextBoxPrice")).Text;
+       
+
+      
+                SqlDataSource1.InsertParameters["Image"].DefaultValue =
+                    ((TextBox)e.Item.FindControl("TextBoxImage")).Text;
+
+                // dopisac sprawdzanie czy pola sa wypelnione
+ 
+                    SqlDataSource1.Insert();
+                    DataList1.DataBind();
+
+                          
+            }
+        }
     }
 }
