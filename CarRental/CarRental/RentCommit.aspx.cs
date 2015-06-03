@@ -18,7 +18,7 @@ namespace CarRental
             Cennik2.Text = Request.Cookies["price"].Value;
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click1(object sender, EventArgs e)
         {
             try
             {
@@ -57,5 +57,6 @@ namespace CarRental
                 Response.Write("ERROR " + ex.ToString());
             }
         }
+
     }
 }
