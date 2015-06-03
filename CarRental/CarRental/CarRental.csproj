@@ -67,12 +67,14 @@
       <DependentUpon>Registration.mdf</DependentUpon>
     </Content>
     <Content Include="CarView.aspx" />
+    <Content Include="CarViewMix.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="DBTest.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="History.aspx" />
     <Content Include="Icon.png" />
     <Content Include="index.html" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -93,6 +95,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="packages.config" />
+    <Content Include="Tranzakcje.aspx" />
     <Content Include="UserMasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -152,12 +155,26 @@
     <Compile Include="CarView.aspx.designer.cs">
       <DependentUpon>CarView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CarViewMix.aspx.cs">
+      <DependentUpon>CarViewMix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarViewMix.aspx.designer.cs">
+      <DependentUpon>CarViewMix.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DBTest.aspx.cs">
       <DependentUpon>DBTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DBTest.aspx.designer.cs">
       <DependentUpon>DBTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -201,6 +218,13 @@
     </Compile>
     <Compile Include="RentCommit.aspx.designer.cs">
       <DependentUpon>RentCommit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tranzakcje.aspx.cs">
+      <DependentUpon>Tranzakcje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tranzakcje.aspx.designer.cs">
+      <DependentUpon>Tranzakcje.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>

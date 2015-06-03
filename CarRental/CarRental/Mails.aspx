@@ -7,6 +7,15 @@
     <title>Wiadomości</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/cover.css" rel="stylesheet" />
+    <style type="text/css">
+        #fixhet {
+                width: 500px;
+            }
+        #fixhut {
+                width: 250px;
+            }
+
+        </style>
 </head>
 <body>
         <div class="site-wrapper">
@@ -20,9 +29,8 @@
               <h3 class="masthead-brand">Wypożyczalnia</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li ><a href="..">Home</a></li>
-                  <li class="active"><a href="#">Rejestracja</a></li>
-                   <li><a href="Login.aspx">Logowanie</a></li>
+                  <li ><a href="User.aspx">Home</a></li>
+                   <li class="active"><a href="#">Wiadomości</a></li>
                 </ul>
               </nav>
             </div>
@@ -30,22 +38,22 @@
  <form id="form1" runat="server">            
           <asp:FormView ID="MailsFormView"
                 DataSourceID="GetMail"
-                AllowPaging="true"
+                AllowPaging="True"
                 runat="server">               
                                     
                 <ItemTemplate>
-                    <div class = "inner cover">
-                  <table class="table" style="margin:0 auto;">
+                    <div class = "dark-matter">
+                  <table class="table table-bordered" style="margin:0 auto;">
             <thead>
                 <tr>
-                    <th>
+                    <th id="fixhet">
                         Temat: <asp:Label ID="Tytul" runat="server" Text='<%# Eval("Title") %>'></asp:Label>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>          
+                    <td id="fixhet">          
                         <asp:Label ID="Cennik" runat="server" Text='<%# Eval("Body") %>'></asp:Label>
                     </td>
                 </tr>
@@ -59,8 +67,8 @@
                   <table style="margin:0 auto;">
                     <tr>
                       <td><asp:LinkButton ID="FirstButton" CommandName="Page" CommandArgument="First" Text="<<" RunAt="server"/></td>
-                      <td><asp:LinkButton ID="PrevButton"  CommandName="Page" CommandArgument="Prev"  Text="<"  RunAt="server"/></td>
-                      <td><asp:LinkButton ID="NextButton"  CommandName="Page" CommandArgument="Next"  Text=">"  RunAt="server"/></td>
+                      <td id="fixhet"><asp:LinkButton ID="PrevButton"  CommandName="Page" CommandArgument="Prev"  Text="<"  RunAt="server"/></td>
+                      <td id="fixhet"><asp:LinkButton ID="NextButton"  CommandName="Page" CommandArgument="Next"  Text=">"  RunAt="server"/></td>
                       <td><asp:LinkButton ID="LastButton"  CommandName="Page" CommandArgument="Last"  Text=">>" RunAt="server"/></td>
                     </tr>
                   </table>
@@ -69,7 +77,11 @@
 
               </asp:FormView>
 
-            <asp:SqlDataSource ID="GetMail" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="SELECT * FROM [Mail]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="GetMail" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="SELECT * FROM [Mail] WHERE ([Login] = @Login)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="Login" SessionField="New" Type="String" />
+                </SelectParameters>
+          </asp:SqlDataSource>
                     </form>                       
             
             
