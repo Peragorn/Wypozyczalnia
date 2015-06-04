@@ -95,7 +95,8 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="packages.config" />
-    <Content Include="Tranzakcje.aspx" />
+    <Content Include="Restoration.aspx" />
+    <Content Include="UserEditUser.aspx" />
     <Content Include="UserMasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -219,12 +220,12 @@
     <Compile Include="RentCommit.aspx.designer.cs">
       <DependentUpon>RentCommit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tranzakcje.aspx.cs">
-      <DependentUpon>Tranzakcje.aspx</DependentUpon>
+    <Compile Include="Restoration.aspx.cs">
+      <DependentUpon>Restoration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tranzakcje.aspx.designer.cs">
-      <DependentUpon>Tranzakcje.aspx</DependentUpon>
+    <Compile Include="Restoration.aspx.designer.cs">
+      <DependentUpon>Restoration.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
@@ -232,6 +233,13 @@
     </Compile>
     <Compile Include="User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserEditUser.aspx.cs">
+      <DependentUpon>UserEditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEditUser.aspx.designer.cs">
+      <DependentUpon>UserEditUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserMasterPage.Master.cs">
       <DependentUpon>UserMasterPage.Master</DependentUpon>

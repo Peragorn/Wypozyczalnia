@@ -38,9 +38,9 @@
                         <nav>
                             <ul class="nav masthead-nav">
                                 <li><a href="CarView.aspx">Wypożycz auto</a></li>
-                                <li><a href="..">Wiadomości email</a></li>
-                                <li><a href="..">Moje wypożyczenia</a></li>
-                                <li><a href="..">Moje konto</a></li>
+                                <li><a href="Mails.aspx">Wiadomości email</a></li>
+                                <li><a href="History.aspx">Moje wypożyczenia</a></li>
+                                <li><a href="UserEditUser.aspx">Moje konto</a></li>
                                 <li><a href="Logout.aspx">Wyloguj</a></li>
                             </ul>
                         </nav>

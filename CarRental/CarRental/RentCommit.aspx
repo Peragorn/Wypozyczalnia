@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RentCommit.aspx.cs" Inherits="CarRental.RentCommit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RentCommit.aspx.cs" Inherits="CarRental.RentCommit" MasterPageFile="~/UserMasterPage.Master" %>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -30,31 +30,34 @@
           </div>
 
     <form id="form1" runat="server">
-        <div class="dark-matter">
+        <div class="dark-matter">--%>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Label ID="Marka2" runat="server" Text="Adres: "></asp:Label>
+    <asp:Label ID="Model2" runat="server" Text="Adres: "></asp:Label>
+    <br />
+    Cena/dzień:
+    <asp:Label ID="Cennik2" runat="server" Text="Adres: "></asp:Label>
+    <br />
+    <asp:Label ID="Label2" runat="server" Text="Wynajem od: "></asp:Label>
+    <asp:TextBox ID="wynajemod" runat="server" Width="248px" ForeColor="Black"></asp:TextBox>
+    <br />
+    <asp:Label ID="Label1" runat="server" Text="Wynajem do: "></asp:Label>
+    <asp:TextBox ID="wynajemdo" runat="server" Width="248px" ForeColor="Black"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="Potwierdź" OnClick="Button1_Click1" />
 
-                    <asp:Label ID="Marka2" runat="server" Text="Adres: "></asp:Label> 
-                    <asp:Label ID="Model2" runat="server" Text="Adres: "></asp:Label>
-                    <br />
-                    Cena/dzień: <asp:Label ID="Cennik2" runat="server" Text="Adres: "></asp:Label>
-                    <br />
-                    <asp:Label ID="Label2" runat="server" Text="Wynajem od: "></asp:Label>
-                    <asp:TextBox id="wynajemod" runat="server" Width="248px"></asp:TextBox>
-                    <br />
-                    <asp:Label ID="Label1" runat="server" Text="Wynajem do: "></asp:Label>
-                    <asp:TextBox id="wynajemdo" runat="server" Width="248px"></asp:TextBox>
-                    <br />
-                    <asp:Button ID="Button1" runat="server" class="btn btn-success" Text="Potwierdź" />
 
-
-     <asp:CompareValidator id="cvtxtStartDate" runat="server" 
-                ControlToCompare="wynajemod" cultureinvariantvalues="true" 
-                display="Dynamic" enableclientscript="true"  
-                ControlToValidate="wynajemdo" 
-                ErrorMessage="Start date must be earlier than finish date"
-                type="Date" setfocusonerror="true" Operator="GreaterThanEqual" 
-                text="Start date must be earlier than finish date">
-     </asp:CompareValidator>
-            </div>  
+    <asp:CompareValidator ID="cvtxtStartDate" runat="server"
+        ControlToCompare="wynajemod" CultureInvariantValues="true"
+        Display="Dynamic" EnableClientScript="true"
+        ControlToValidate="wynajemdo"
+        ErrorMessage="Start date must be earlier than finish date"
+        Type="Date" SetFocusOnError="true" Operator="GreaterThanEqual"
+        Text="Start date must be earlier than finish date">
+    </asp:CompareValidator>
+</asp:Content>
+<%--         </div>  
            </form>             
         <div class="mastfoot">
             
@@ -105,4 +108,4 @@
 
     </script>-->
 </body>
-</html>
+</html>--%>

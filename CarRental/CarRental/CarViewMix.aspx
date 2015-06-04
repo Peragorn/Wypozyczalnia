@@ -21,7 +21,9 @@
               <h3 class="masthead-brand">Wypożycz auto</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li ><a href="..">Home</a></li>
+                  <li ><a href="index.html">Home</a></li>
+                  <li ><a href="Registration.aspx">Rejestracja</a></li>
+                   <li><a href="Login.aspx">Logowanie</a></li>
                 </ul>
               </nav>
             </div>
@@ -54,7 +56,7 @@
             <tfoot>                
                 <tr>
                     <td>
-                        Opis auta.
+                        <%--Opis auta.--%>
                     </td>
                 </tr>               
             </tfoot>
@@ -67,7 +69,7 @@
             </asp:SqlDataSource>
             </form>
 
-            
+<%--            
             <div width: 100% position: fixed;>
                 <div class="inner">
                     <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -75,7 +77,7 @@
                     
                    
                 </div>
-          </div>
+          </div>--%>
 
         </div>
 
