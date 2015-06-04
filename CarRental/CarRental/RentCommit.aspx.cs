@@ -50,7 +50,7 @@ namespace CarRental
 
                 conn.Close();
 
-
+                Response.Redirect("User.aspx");
             }
             catch (Exception ex)
             {

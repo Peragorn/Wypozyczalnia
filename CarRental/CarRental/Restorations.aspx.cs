@@ -9,20 +9,18 @@ using System.Configuration;
 
 namespace CarRental
 {
-    public partial class Tranzakcje : System.Web.UI.Page
+    public partial class Restorations : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        protected void DataList1_ItemCommand(object source,
-DataListCommandEventArgs e)
+        protected void DataList1_ItemCommand(object source, DataListCommandEventArgs e)
         {
             if (e.CommandName == "zwrot")
             {
                 DataListItem item = (DataListItem)(((Button)(e.CommandSource)).NamingContainer);
-                string start = ((Label)item.FindControl("Label3")).Text;
+                string start = ((Label)item.FindControl("Label4")).Text;
 
                 SqlConnection conn = new SqlConnection(
                        ConfigurationManager.
@@ -30,7 +28,8 @@ DataListCommandEventArgs e)
                        ConnectionString);
                 conn.Open();
 
-                string comm = "delete from Rent where Id_rent=" + start + "";
+                //string comm = "delete from Rent where Id_rent=" + start + "";
+                string comm = "UPDATE Car SET Rent='1' WHERE Id_Car="+start+"";
                 SqlCommand idc = new SqlCommand(comm, conn);
                 idc.ExecuteNonQuery();
 
@@ -42,7 +41,7 @@ DataListCommandEventArgs e)
 
                 conn.Close();
 
-                Response.Redirect("Tranzakcje.aspx");
+                Response.Redirect("User.aspx");
             }
 
         }

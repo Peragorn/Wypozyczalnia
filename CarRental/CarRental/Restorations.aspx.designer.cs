@@ -10,7 +10,7 @@
 namespace CarRental {
     
     
-    public partial class Tranzakcje {
+    public partial class Restorations {
         
         /// <summary>
         /// DataList1 control.
