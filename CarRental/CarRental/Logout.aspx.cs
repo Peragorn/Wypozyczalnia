@@ -18,7 +18,7 @@ namespace CarRental
         {
             Session.Abandon();
             Session["New"] = null;
-            Response.Redirect("index.html");
+            Response.Redirect("index.aspx");
         }
     }
 }

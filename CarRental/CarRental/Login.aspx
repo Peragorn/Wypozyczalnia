@@ -21,7 +21,7 @@
               <h3 class="masthead-brand">Wypożyczalnia</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li ><a href="..">Home</a></li>
+                  <li ><a href="index.aspx">Home</a></li>
                   <li ><a href="Registration.aspx">Rejestracja</a></li>
                    <li class="active"><a href="#">Logowanie</a></li>
                 </ul>

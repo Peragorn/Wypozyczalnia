@@ -24,7 +24,7 @@ namespace CarRental
         protected void Wyloguj_Click(object sender, EventArgs e)
         {
             Session["New"] = null;
-            Response.Redirect("index.html");
+            Response.Redirect("index.aspx");
         }
     }
 }

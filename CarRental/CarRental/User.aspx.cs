@@ -47,7 +47,7 @@ namespace CarRental
                 DateTime dt = Convert.ToDateTime(reader[0].ToString());
                 if (dt < Convert.ToDateTime(DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss")))
                 {
-                    MassageBox("Przekroczono termin zwrotu samochodu! Zwróć samochód");
+                    MassageBox("Przekroczono termin zwrotu samochodu! Zwróć samochód.");
                 }
                 //DateTime.Today.ToString("yyyy-MM-dd HH:mm:ss");
                 //Response.Write(dt);
@@ -63,7 +63,7 @@ namespace CarRental
         {
             Session.Abandon();
             Session["New"] = null;
-            Response.Redirect("index.html");
+            Response.Redirect("index.aspx");
         }
 
         public void MassageBox(String msg) 
