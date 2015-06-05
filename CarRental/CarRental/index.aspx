@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="icon" href="css/image/samochod.jpg"/>
+    <link rel="icon" href="css/image/samochod.jpg" />
     <title>Wypożyczalnia</title>
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet"/>
+    <link href="css/cover.css" rel="stylesheet" />
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -36,74 +36,26 @@
                         </nav>
                     </div>
                 </div>
-
                 <div class="inner cover">
-                    <!-- Carousel
-    ================================================== -->
-<%--                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img class="first-slide" src="http://blog.caranddriver.com/wp-content/uploads/2014/12/Ferrari-Sergio3_4antSX.jpg" alt="First slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <h1>Example headline.</h1>
-                                        <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                                        <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img class="second-slide" src="http://automotiveblog.pl/wp-content/uploads/2010/04/Opel_Insignia_Exterior_1.jpg" alt="Second slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <h1>Another example headline.</h1>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                        <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>-->
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img class="third-slide" src="http://i.wp.pl/a/f/jpeg/10880/bravo-fiat-2006-01.jpeg" alt="Third slide">
-                                <div class="container">
-                                    <div class="carousel-caption">
-                                        <h1>One more for good measure.</h1>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                        <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div><!-- /.carousel -->--%>
 
-                    <h1 class="cover-heading">Rent wisely.</h1>
-                    <p class="lead">jakies dlugie haslo reklamujace nasza firme wypozyczajaca samochody jakies dlugie haslo reklamujace nasza firme wypozyczajaca samochody jakies dlugie haslo reklamujace nasza firme wypozyczajaca samochody</p>
+
+                    <h1 class="cover-heading">Rent wisely</h1>
+                    <h1 class="cover-heading">National Car Rental Company</h1>
+                    <br />
+                    <h2><p class="lead"><a href="News.aspx" >Zapoznaj sie z nowościami</a></p></h2>
                     <p class="lead">
                         <a href="CarViewMix.aspx" class="btn btn-lg btn-default">Przeglądaj samochody</a>
                     </p>
                 </div>
                 <div class="mastfoot">
                     <div class="inner">
-                        <p><asp:Label ID="LabelViews" runat="server" ForeColor="Red"></asp:Label></p>
+                        <p>
+                            <asp:Label ID="LabelViews" runat="server" ForeColor="Red"></asp:Label></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

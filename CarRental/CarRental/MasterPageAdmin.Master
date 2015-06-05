@@ -39,6 +39,8 @@
                     <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/AdminShowEmails.aspx">Show emails</asp:HyperLink>
                     <br />
                     <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AdminWriteEmail.aspx">Write email</asp:HyperLink>
+                     <br />
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/AdminEditNews.aspx">Edit news</asp:HyperLink>
                 </td>
             </tr>
             <tr>

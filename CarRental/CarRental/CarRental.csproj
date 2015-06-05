@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminEditCars.aspx" />
+    <Content Include="AdminEditNews.aspx" />
     <Content Include="AdminEditUser.aspx" />
     <Content Include="AdminPage.aspx" />
     <Content Include="AdminShowEmails.aspx" />
@@ -89,6 +90,7 @@
     <Content Include="MasterPageAdmin.Master" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="News.aspx" />
     <Content Include="RentCommit.aspx" />
     <Content Include="Restorations.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -121,6 +123,13 @@
     </Compile>
     <Compile Include="AdminEditCars.aspx.designer.cs">
       <DependentUpon>AdminEditCars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditNews.aspx.cs">
+      <DependentUpon>AdminEditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEditNews.aspx.designer.cs">
+      <DependentUpon>AdminEditNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminEditUser.aspx.cs">
       <DependentUpon>AdminEditUser.aspx</DependentUpon>
@@ -215,6 +224,13 @@
     </Compile>
     <Compile Include="MasterPageAdmin.Master.designer.cs">
       <DependentUpon>MasterPageAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.aspx.cs">
