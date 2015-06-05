@@ -27,11 +27,17 @@
             </div>
           </div>--%>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <style type="text/css">
+        #content {
+    width: 80%;
+    margin: 150px auto;
+}
+    </style>
    <%--     <form id="form1" runat="server">--%>
              <asp:DataList ID="DataList1" runat="server" DataKeyField="Id_Car" DataSourceID="CarRentalDB" OnItemCommand="DataList1_ItemCommand" OnDeleteCommand="DataList1_DeleteCommand">
 <ItemTemplate>
-<div class = "inner cover">
+
+<div class = "inner cover" id="content">
 
         <table class="table table-condensed" width: 100%>
             <thead>

@@ -30,35 +30,64 @@
           </div>--%>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="Login" DataSourceID="Transakcje">
+ <%--   <asp:DataList ID="DataList1" runat="server" DataKeyField="Login" DataSourceID="Transakcje">
         <ItemTemplate>
-            <div class="dark matter">
+            
+        </ItemTemplate>
+    </asp:DataList>--%>
+    <style type="text/css">
+                #fixhet {
+                width: 500px;
+            }
+    </style>
+    <asp:FormView ID="HistoryFormView"
+        DataSourceID="Transakcje"
+        AllowPaging="True"
+        runat="server">
+        <ItemTemplate>
+            <div class="dark-matter">
                 <table class="table table-bordered">
                     <tr>
-                        <td>
+                        <td id="fixhet"  style="text-align:center">
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("Trademark") %>' />
                             <asp:Label ID="Label2" runat="server" Text='<%# Eval("Model") %>' /></td>
                     </tr>
                     <tr>
-                        <td>Początek:
+                        <td id="fixhet" style="text-align:center">Początek:
                             <asp:Label ID="Rent_startLabel" runat="server" Text='<%# Eval("Rent_start").ToString().Remove(10) %>' /></td>
                     </tr>
                     <tr>
-                        <td>Koniec:
+                        <td id="fixhet" style="text-align:center">Koniec:
                             <asp:Label ID="Rent_endLabel" runat="server" Text='<%# Eval("Rent_end").ToString().Remove(10) %>' /></td>
                     </tr>
                 </table>
             </div>
         </ItemTemplate>
-    </asp:DataList>
-
-
+        <PagerTemplate>
+            <div class="inner cover">
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td id="fixhet">
+                            <asp:LinkButton ID="FirstButton" CommandName="Page" CommandArgument="First" Text="<<" runat="server" /></td>
+                        <td >
+                            <asp:LinkButton ID="PrevButton" CommandName="Page" CommandArgument="Prev" Text="<" runat="server" /></td>
+                        <td >
+                            <asp:LinkButton ID="NextButton" CommandName="Page" CommandArgument="Next" Text=">" runat="server" /></td>
+                        <td id="fixhet">
+                            <asp:LinkButton ID="LastButton" CommandName="Page" CommandArgument="Last" Text=">>" runat="server" /></td>
+                    </tr>
+                </table>
+            </div>
+        </PagerTemplate>
+    </asp:FormView>
 
     <asp:SqlDataSource ID="Transakcje" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="select Rent_start, Rent_end, Login, Model, Trademark from Car c, Rent r where [Login] = @Login and c.Id_car=r.Id_car;">
         <SelectParameters>
             <asp:SessionParameter Name="Login" SessionField="New" Type="String" />
         </SelectParameters>
     </asp:SqlDataSource>
+
+    
 
 </asp:Content>
 

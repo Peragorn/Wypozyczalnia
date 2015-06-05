@@ -11,10 +11,16 @@
         .auto-style1 {
             width: 100%;
         }
+        #head {
+            width: 100%;
+            position: fixed;
+             top: 0;
+        }
         </style>
+
 </head>
 <body>
-
+    <header>
     <form id="form1" runat="server">
 
         <table class="auto-style1">
@@ -55,6 +61,7 @@
         </table>
 
     </form>
+        </header>
 </body>
 </html>
 

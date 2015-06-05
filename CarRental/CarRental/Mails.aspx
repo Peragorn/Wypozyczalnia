@@ -41,9 +41,6 @@
         #fixhet {
                 width: 500px;
             }
-        #fixhut {
-                width: 250px;
-            }
 
         </style>
     <asp:FormView ID="MailsFormView"
@@ -76,13 +73,13 @@
             <div class="inner cover">
                 <table style="margin: 0 auto;">
                     <tr>
-                        <td>
+                        <td id="fixhet">
                             <asp:LinkButton ID="FirstButton" CommandName="Page" CommandArgument="First" Text="<<" runat="server" /></td>
-                        <td id="fixhet">
-                            <asp:LinkButton ID="PrevButton" CommandName="Page" CommandArgument="Prev" Text="<" runat="server" /></td>
-                        <td id="fixhet">
-                            <asp:LinkButton ID="NextButton" CommandName="Page" CommandArgument="Next" Text=">" runat="server" /></td>
                         <td>
+                            <asp:LinkButton ID="PrevButton" CommandName="Page" CommandArgument="Prev" Text="<" runat="server" /></td>
+                        <td>
+                            <asp:LinkButton ID="NextButton" CommandName="Page" CommandArgument="Next" Text=">" runat="server" /></td>
+                        <td id="fixhet">
                             <asp:LinkButton ID="LastButton" CommandName="Page" CommandArgument="Last" Text=">>" runat="server" /></td>
                     </tr>
                 </table>

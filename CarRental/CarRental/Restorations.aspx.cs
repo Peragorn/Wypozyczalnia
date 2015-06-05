@@ -28,13 +28,13 @@ namespace CarRental
                        ConnectionString);
                 conn.Open();
 
-                //string comm = "delete from Rent where Id_rent=" + start + "";
-                string comm = "UPDATE Car SET Rent='1' WHERE Id_Car="+start+"";
+                string marka = ((Label)item.FindControl("Label1")).Text;
+                string model = ((Label)item.FindControl("Label2")).Text;
+                string comm = "UPDATE Car SET Rent='1' WHERE Model="+model+"";
                 SqlCommand idc = new SqlCommand(comm, conn);
                 idc.ExecuteNonQuery();
 
-                string marka = ((Label)item.FindControl("Label1")).Text;
-                string model = ((Label)item.FindControl("Label2")).Text;
+
                 string updateQ = "update Car set Rent='True' where Trademark='" + marka + "' and Model='" + model + "'";
                 SqlCommand upd = new SqlCommand(updateQ, conn);
                 upd.ExecuteNonQuery();
