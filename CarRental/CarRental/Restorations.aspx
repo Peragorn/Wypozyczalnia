@@ -65,7 +65,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:Button ID="ButtonX" runat="server" CommandName="zwrot" class="btn btn-danger" Text="Zwrot" />
+                                <asp:Button ID="ButtonX" runat="server" CommandName="zwrot" class="btn btn-danger" Text="Zwrot" OnClick="ButtonX_Click" />
                             </td>
                         </tr>
                     </table>

@@ -45,5 +45,38 @@ namespace CarRental
             }
 
         }
+
+        protected void ButtonX_Click(object sender, EventArgs e)
+        {
+            //if (e.CommandName == "zwrot")
+            //{
+              //  DataListItem item = (DataListItem)(((Button)(e.CommandSource)).NamingContainer);
+              //  string start = ((Label)item.FindControl("Label4")).Text;
+
+                SqlConnection conn = new SqlConnection(
+                       ConfigurationManager.
+                       ConnectionStrings["RegistrationConnectionString"].
+                       ConnectionString);
+                conn.Open();
+
+                //string marka = ((Label)item.FindControl("Label1")).Text;
+               // string model = ((Label)item.FindControl("Label2")).Text;
+                string marka = ((Label)RestoFormView.FindControl("Label1")).Text;
+                string model = ((Label)RestoFormView.FindControl("Label2")).Text;
+
+                //string comm = "UPDATE Car SET Rent='1' WHERE Model=" + model + "";
+                //SqlCommand idc = new SqlCommand(comm, conn);
+                //idc.ExecuteNonQuery();
+
+
+                string updateQ = "update Car set Rent='True' where Trademark='" + marka + "' and Model='" + model + "'";
+                SqlCommand upd = new SqlCommand(updateQ, conn);
+                upd.ExecuteNonQuery();
+
+                conn.Close();
+
+                Response.Redirect("User.aspx");
+            //}
+        }
     }
 }
